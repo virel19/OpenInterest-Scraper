@@ -79,8 +79,6 @@ async function run() {
             Market sentiment is favoring longs you should think about ${currentFav} the market.
             `;
 
-            const emailContent1 = `Open Interest is $${data.openInterest.toLocaleString()}`;
-
             if (data.longPosition >= openInterestPercentage) {
                 sendShortEmail(emailContent);
             }
@@ -90,7 +88,7 @@ async function run() {
             }
 
             if(data.openInterest >= 100000000){
-                sendOpenInterest(emailContent1);
+                sendOpenInterest(emailContent);
             }
 
             console.log('Date:', timestamp);

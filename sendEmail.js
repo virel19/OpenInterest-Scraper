@@ -47,14 +47,14 @@ function sendLongEmail(emailContent) {
 
 function sendOpenInterest(emailContent) {
 
-  const mailOptionsLong = {
+  const mailOptionsOpenInterest = {
     from: `${process.env.GMAIL}`,
     to: `${process.env.GMAIL}`,
     subject: 'OPEN INTEREST',
     text: emailContent,
   };
   
-  transporter.sendMail(mailOptionsLong, (error, info) => {
+  transporter.sendMail(mailOptionsOpenInterest, (error, info) => {
     if (error) {
       console.log(error);
     } else {
