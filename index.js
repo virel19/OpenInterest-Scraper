@@ -8,7 +8,7 @@ async function run() {
             headless: 'new',
         });
         const page = await browser.newPage();
-        await page.goto('https://app.gmx.io/#/dashboard', { waitUntil: 'networkidle0' });
+        await page.goto('https://app.gmx.io/#/dashboard', { waitUntil: 'networkidle2' });
 
         await page.screenshot({ path: 'example.png', fullPage: true });
 
